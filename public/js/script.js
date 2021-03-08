@@ -17,6 +17,7 @@
             error: function (data){
                 // clear errors
                 jQuery("#callback-form .invalid-feedback").remove();
+                jQuery("#callback-form input").removeClass("is-invalid");
 
                 // show new errors
                 for (const property in data.responseJSON.errors) {
